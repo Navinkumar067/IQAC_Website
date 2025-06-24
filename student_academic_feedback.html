@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPGIT - Internal Quality Assurance Cell</title>
+
+    <!-- Link to Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Styling the headings in blue */
+        h1 {
+            color: #0053a0;
+            text-align: center; /* Center the heading */
+        }
+
+        /* Styling the form */
+        .feedback-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: white; /* White background */
+        }
+
+        .feedback-form label {
+            font-weight: bold;
+        }
+
+        .feedback-form input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .feedback-form textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: none;
+        }
+
+        .feedback-form button {
+            background-color: #0053a0;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .feedback-form button:hover {
+            background-color: #003b75;
+        }
+
+        /* Styling for the Back to Home link */
+        .back-to-home {
+            color: #007BFF; 
+            text-decoration: none; 
+            margin-top: 20px; 
+            text-align: center; 
+            display: block; 
+        }
+
+        .back-to-home:hover {
+            text-decoration: underline; 
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Placeholder for the Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Placeholder for Navbar -->
+    <div id="navbar-placeholder"></div>
+
+    <h1>Student Feedback</h1>
+
+    <!-- Feedback form content -->
+    <div class="feedback-form">
+        <form action="#" method="POST">
+            <!-- Question 1 -->
+            <label>1. Rate the opportunities the curriculum provides to excel in co-curricular and extracurricular activities:</label>
+            <div>
+                <input type="radio" id="strongly-agree" name="opportunity" value="Strongly Agree">
+                <label for="strongly-agree">Strongly Agree</label><br>
+                
+                <input type="radio" id="agree" name="opportunity" value="Agree">
+                <label for="agree">Agree</label><br>
+                
+                <input type="radio" id="neutral" name="opportunity" value="Neutral">
+                <label for="neutral">Neutral</label><br>
+                
+                <input type="radio" id="disagree" name="opportunity" value="Disagree">
+                <label for="disagree">Disagree</label><br>
+                
+                <input type="radio" id="strongly-disagree" name="opportunity" value="Strongly Disagree">
+                <label for="strongly-disagree">Strongly Disagree</label>
+            </div>
+
+            <!-- Question 2 -->
+            <label>2. Rate the effectiveness of the teaching methods used in the curriculum:</label>
+            <div>
+                <input type="radio" id="effective-strongly-agree" name="teaching-methods" value="Strongly Agree">
+                <label for="effective-strongly-agree">Strongly Agree</label><br>
+                
+                <input type="radio" id="effective-agree" name="teaching-methods" value="Agree">
+                <label for="effective-agree">Agree</label><br>
+                
+                <input type="radio" id="effective-neutral" name="teaching-methods" value="Neutral">
+                <label for="effective-neutral">Neutral</label><br>
+                
+                <input type="radio" id="effective-disagree" name="teaching-methods" value="Disagree">
+                <label for="effective-disagree">Disagree</label><br>
+                
+                <input type="radio" id="effective-strongly-disagree" name="teaching-methods" value="Strongly Disagree">
+                <label for="effective-strongly-disagree">Strongly Disagree</label>
+            </div>
+
+            <!-- Question 3 -->
+            <label>3. How well do the faculty members engage students in classroom activities?</label>
+            <div>
+                <input type="radio" id="engaging-very" name="engagement" value="Very Engaging">
+                <label for="engaging-very">Very Engaging</label><br>
+                
+                <input type="radio" id="engaging" name="engagement" value="Engaging">
+                <label for="engaging">Engaging</label><br>
+                
+                <input type="radio" id="engaging-neutral" name="engagement" value="Neutral">
+                <label for="engaging-neutral">Neutral</label><br>
+                
+                <input type="radio" id="engaging-not" name="engagement" value="Not Engaging">
+                <label for="engaging-not">Not Engaging</label><br>
+                
+                <input type="radio" id="engaging-poor" name="engagement" value="Poorly Engaging">
+                <label for="engaging-poor">Poorly Engaging</label>
+            </div>
+
+            <!-- Question 4 -->
+            <label>4. Do you feel the institution supports student well-being and mental health?</label>
+            <div>
+                <input type="radio" id="wellbeing-strongly-agree" name="wellbeing" value="Strongly Agree">
+                <label for="wellbeing-strongly-agree">Strongly Agree</label><br>
+                
+                <input type="radio" id="wellbeing-agree" name="wellbeing" value="Agree">
+                <label for="wellbeing-agree">Agree</label><br>
+                
+                <input type="radio" id="wellbeing-neutral" name="wellbeing" value="Neutral">
+                <label for="wellbeing-neutral">Neutral</label><br>
+                
+                <input type="radio" id="wellbeing-disagree" name="wellbeing" value="Disagree">
+                <label for="wellbeing-disagree">Disagree</label><br>
+                
+                <input type="radio" id="wellbeing-strongly-disagree" name="wellbeing" value="Strongly Disagree">
+                <label for="wellbeing-strongly-disagree">Strongly Disagree</label>
+            </div>
+
+            <!-- Question 5 -->
+            <label>5. Rate the institution’s infrastructure and resources (e.g., library, labs, technology):</label>
+            <div>
+                <input type="radio" id="infra-excellent" name="infrastructure" value="Excellent">
+                <label for="infra-excellent">Excellent</label><br>
+                
+                <input type="radio" id="infra-good" name="infrastructure" value="Good">
+                <label for="infra-good">Good</label><br>
+                
+                <input type="radio" id="infra-average" name="infrastructure" value="Average">
+                <label for="infra-average">Average</label><br>
+                
+                <input type="radio" id="infra-below-average" name="infrastructure" value="Below Average">
+                <label for="infra-below-average">Below Average</label><br>
+                
+                <input type="radio" id="infra-poor" name="infrastructure" value="Poor">
+                <label for="infra-poor">Poor</label>
+            </div>
+
+                        <!-- Question 6 -->
+                        <label>6. Do you feel the curriculum is aligned with industry standards and job market needs?</label>
+                        <div>
+                            <input type="radio" id="aligned-strongly-agree" name="industry-alignment" value="Strongly Agree">
+                            <label for="aligned-strongly-agree">Strongly Agree</label><br>
+                            
+                            <input type="radio" id="aligned-agree" name="industry-alignment" value="Agree">
+                            <label for="aligned-agree">Agree</label><br>
+                            
+                            <input type="radio" id="aligned-neutral" name="industry-alignment" value="Neutral">
+                            <label for="aligned-neutral">Neutral</label><br>
+                            
+                            <input type="radio" id="aligned-disagree" name="industry-alignment" value="Disagree">
+                            <label for="aligned-disagree">Disagree</label><br>
+                            
+                            <input type="radio" id="aligned-strongly-disagree" name="industry-alignment" value="Strongly Disagree">
+                            <label for="aligned-strongly-disagree">Strongly Disagree</label>
+                        </div>
+            
+                        <!-- Question 7 -->
+                        <label>7. Rate the accessibility of the faculty for academic support:</label>
+                        <div>
+                            <input type="radio" id="accessibility-excellent" name="faculty-accessibility" value="Excellent">
+                            <label for="accessibility-excellent">Excellent</label><br>
+                            
+                            <input type="radio" id="accessibility-good" name="faculty-accessibility" value="Good">
+                            <label for="accessibility-good">Good</label><br>
+                            
+                            <input type="radio" id="accessibility-average" name="faculty-accessibility" value="Average">
+                            <label for="accessibility-average">Average</label><br>
+                            
+                            <input type="radio" id="accessibility-below-average" name="faculty-accessibility" value="Below Average">
+                            <label for="accessibility-below-average">Below Average</label><br>
+                            
+                            <input type="radio" id="accessibility-poor" name="faculty-accessibility" value="Poor">
+                            <label for="accessibility-poor">Poor</label>
+                        </div>
+            
+                        <!-- Question 8 -->
+                        <label>8. How satisfied are you with the overall quality of education you are receiving?</label>
+                        <div>
+                            <input type="radio" id="satisfaction-very-satisfied" name="satisfaction" value="Very Satisfied">
+                            <label for="satisfaction-very-satisfied">Very Satisfied</label><br>
+                            
+                            <input type="radio" id="satisfaction-satisfied" name="satisfaction" value="Satisfied">
+                            <label for="satisfaction-satisfied">Satisfied</label><br>
+                            
+                            <input type="radio" id="satisfaction-neutral" name="satisfaction" value="Neutral">
+                            <label for="satisfaction-neutral">Neutral</label><br>
+                            
+                            <input type="radio" id="satisfaction-dissatisfied" name="satisfaction" value="Dissatisfied">
+                            <label for="satisfaction-dissatisfied">Dissatisfied</label><br>
+                            
+                            <input type="radio" id="satisfaction-very-dissatisfied" name="satisfaction" value="Very Dissatisfied">
+                            <label for="satisfaction-very-dissatisfied">Very Dissatisfied</label>
+                        </div>
+            
+                        <!-- Question 9 -->
+                        <label>9. How do you rate the support provided by faculty and staff?</label>
+                        <div>
+                            <input type="radio" id="support-excellent" name="support" value="Excellent">
+                            <label for="support-excellent">Excellent</label><br>
+                            
+                            <input type="radio" id="support-good" name="support" value="Good">
+                            <label for="support-good">Good</label><br>
+                            
+                            <input type="radio" id="support-average" name="support" value="Average">
+                            <label for="support-average">Average</label><br>
+                            
+                            <input type="radio" id="support-below-average" name="support" value="Below Average">
+                            <label for="support-below-average">Below Average</label><br>
+                            
+                            <input type="radio" id="support-poor" name="support" value="Poor">
+                            <label for="support-poor">Poor</label>
+                        </div>
+            
+                        <!-- Question 10 -->
+                        <label>10. Rate the availability of learning resources (books, online materials, etc.):</label>
+                        <div>
+                            <input type="radio" id="resources-excellent" name="resources" value="Excellent">
+                            <label for="resources-excellent">Excellent</label><br>
+                            
+                            <input type="radio" id="resources-good" name="resources" value="Good">
+                            <label for="resources-good">Good</label><br>
+                            
+                            <input type="radio" id="resources-average" name="resources" value="Average">
+                            <label for="resources-average">Average</label><br>
+                            
+                            <input type="radio" id="resources-below-average" name="resources" value="Below Average">
+                            <label for="resources-below-average">Below Average</label><br>
+                            
+                            <input type="radio" id="resources-poor" name="resources" value="Poor">
+                            <label for="resources-poor">Poor</label>
+                        </div>
+            
+                        <!-- Question 11 -->
+                        <label>11. Do you feel that the curriculum adequately prepares you for your career?</label>
+                        <div>
+                            <input type="radio" id="preparation-strongly-agree" name="career-preparation" value="Strongly Agree">
+                            <label for="preparation-strongly-agree">Strongly Agree</label><br>
+                            
+                            <input type="radio" id="preparation-agree" name="career-preparation" value="Agree">
+                            <label for="preparation-agree">Agree</label><br>
+                            
+                            <input type="radio" id="preparation-neutral" name="career-preparation" value="Neutral">
+                            <label for="preparation-neutral">Neutral</label><br>
+                            
+                            <input type="radio" id="preparation-disagree" name="career-preparation" value="Disagree">
+                            <label for="preparation-disagree">Disagree</label><br>
+                            
+                            <input type="radio" id="preparation-strongly-disagree" name="career-preparation" value="Strongly Disagree">
+                            <label for="preparation-strongly-disagree">Strongly Disagree</label>
+                        </div>
+            
+                        <!-- Comments Section -->
+                        <label>Suggestions for improvements or comments:</label>
+                        <textarea name="comments" placeholder="Your comments here..."></textarea>
+            
+                        <div style="text-align: center; margin-top: 20px;">
+                            <button type="submit">Submit Feedback</button>
+                        </div>
+                    </form>
+                </div>
+            
+                <a href="index.html" class="back-to-home">Back to Home</a>
+            
+                <!-- Placeholder for Footer -->
+                <div id="footer-placeholder"></div>
+            
+                <!-- JavaScript to Load Header and Footer -->
+                <script>
+                    function loadHeaderFooterNavbar() {
+                        // Load the header
+                        fetch('header.html')
+                            .then(response => response.text())
+                            .then(data => {
+                                document.getElementById('header-placeholder').innerHTML = data;
+                                console.log('Header loaded successfully');
+                            })
+                            .catch(error => console.error('Error loading header:', error));
+                
+                        // Load the navbar
+                        fetch('navbar.html')
+                            .then(response => response.text())
+                            .then(data => {
+                                document.getElementById('navbar-placeholder').innerHTML = data;
+                                console.log('Navbar loaded successfully');
+                            })
+                            .catch(error => console.error('Error loading navbar:', error));
+                
+                        // Load the footer
+                        fetch('footer.html')
+                            .then(response => response.text())
+                            .then(data => {
+                                document.getElementById('footer-placeholder').innerHTML = data;
+                                console.log('Footer loaded successfully');
+                            })
+                            .catch(error => console.error('Error loading footer:', error));
+                    }
+                
+                    window.onload = loadHeaderFooterNavbar;
+                </script>
+            </body>
+            </html>
+            

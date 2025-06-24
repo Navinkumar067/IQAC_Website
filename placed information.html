@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPGIT - Internal Quality Assurance Cell</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        h1 {
+            color: #0053a0;
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+       .section-box {
+            background-color: #e9f5ff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .common-link {
+            color: #0053a0;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            margin: 25px 0;
+        }
+
+        .common-link:hover {
+            text-decoration: underline;
+        }
+
+        .common-link .arrow {
+            text-decoration: none;
+            margin-right: 5px;
+            display: inline-block;
+            font-weight: bold;
+        }
+
+         .back-to-home {
+            color: #007BFF;
+            text-decoration: none;
+            margin: 20px 0;
+            text-align: center;
+            display: block;
+        }
+
+        .back-to-home:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <div id="navbar-placeholder"></div>
+
+    <main>
+        <h1>Placed Information</h1>
+        
+        <section class="section-box placed-info">
+            <a href="https://tpgit.edu.in/wp-content/uploads/2024/07/Placed-students-details_2023-2024.pdf" target="_blank" class="common-link">
+                <span class="arrow">&#x2B9A;</span> Download Placed Information 2023-2024 PDF
+            </a>
+            <a href="https://tpgit.edu.in/wp-content/uploads/2024/07/Placed-Information-2022-23.pdf" target="_blank" class="common-link">
+                <span class="arrow">&#x2B9A;</span> Download Placed Information 2022-2023 PDF
+            </a>
+            <a href="https://tpgit.edu.in/wp-content/uploads/2022/06/Placed-Information-2021-22-Batch.pdf" target="_blank" class="common-link">
+                <span class="arrow">&#x2B9A;</span> Download Placed Information 2021-2022 PDF
+            </a>
+            <a href="https://tpgit.edu.in/wp-content/uploads/2022/06/Placed-Information-2020-21-Batch.pdf" target="_blank" class="common-link">
+                <span class="arrow">&#x2B9A;</span> Download Placed Information 2020-2021 PDF
+            </a>
+            <a href="https://tpgit.edu.in/wp-content/uploads/2021/01/Placed-Information-2019-2020.pdf" target="_blank" class="common-link">
+                <span class="arrow">&#x2B9A;</span> Download Placed Information 2019-2020 PDF
+            </a>
+            <a href="https://tpgit.edu.in/wp-content/uploads/2020/03/Placed-Information2018-19.pdf" target="_blank" class="common-link">
+                <span class="arrow">&#x2B9A;</span> Download Placed Information 2018-2019 PDF
+            </a>
+            <a href="https://tpgit.edu.in/wp-content/uploads/2018/01/placement-2016-2017.pdf" target="_blank" class="common-link">
+                <span class="arrow">&#x2B9A;</span> Download Placed Information 2017-2018 PDF
+            </a>
+            <a href="https://tpgit.edu.in/wp-content/uploads/2016/10/Batch-2015-2016.pdf" target="_blank" class="common-link">
+                <span class="arrow">&#x2B9A;</span> Download Placed Information 2016-2017 PDF
+            </a>
+        </section>
+
+        <a href="index.html" class="back-to-home">Back to Home</a>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        function loadHeaderFooterNavbar() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                });
+
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar-placeholder').innerHTML = data;
+                });
+
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                });
+        }
+
+        window.onload = loadHeaderFooterNavbar;
+    </script>
+
+</body>
+</html>

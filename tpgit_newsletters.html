@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPGIT - Internal Quality Assurance Cell</title>
+
+    <!-- Link to Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Styling the headings in blue */
+        h1 {
+            color: #0053a0;
+            text-align: center; /* Center the heading */
+        }
+
+        /* Center and resize the image */
+        .center-image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%; /* Adjust this to control the image size */
+        }
+
+        /* Style for the PDF download link */
+        .pdf-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: #0053a0;
+            text-decoration: none;
+        }
+
+        .pdf-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Common styling for section boxes */
+        .section-box {
+            background-color: #e9f5ff; /* Background color */
+            padding: 20px; /* Add padding for better appearance */
+            margin: 30px auto; /* Center with space above and below */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            text-align: center; /* Center text within the box */
+            width: 80%; /* Width of the box */
+        }
+
+        /* Common styling for links */
+        .common-link {
+            color: #0053a0; /* Link color */
+            text-decoration: none; /* Remove underline */
+            display: flex; /* Flexbox for alignment */
+            align-items: center; /* Center items vertically */
+            margin: 15px 0; /* Space between links */
+        }
+
+        /* Link hover effect */
+        .common-link:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+
+        /* Arrow style */
+        .common-link .arrow {
+            text-decoration: none; /* No underline for the arrow */
+            margin-right: 5px; /* Space between arrow and text */
+            display: inline-block; /* Ensure it doesn't stretch */
+            font-weight: bold; /* Make the arrow bold if desired */
+        }
+
+     /* Styling for the Back to Home link */
+     .back-to-home {
+            color: #007BFF; /* Link color */
+            text-decoration: none; /* Remove underline */
+            margin: 20px 0; /* Space above the link */
+            text-align: center; /* Center the link */
+            display: block; /* Ensure it spans the full width to center the text */
+        }
+
+        .back-to-home:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Placeholder for the Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Placeholder for Navbar -->
+    <div id="navbar-placeholder"></div>
+    
+    <h1>TPGIt News Letters</h1>
+
+    <!-- Tpgit News Section -->
+    <section class="section-box News">
+        <a href="https://tpgit.edu.in/wp-content/uploads/2022/05/News-Letter-jan.-mar-2022.pdf" target="_blank" class="common-link">
+            <span class="arrow">&#x2B9A;</span>  TPGIT News Letter, January, February & March 2022 </a>
+        <a href="https://tpgit.edu.in/wp-content/uploads/2022/06/News-Letter-December.pdf" target="_blank" class="common-link">
+            <span class="arrow">&#x2B9A;</span>  TPGIT News Letter, December 2021 </a>
+        <a href="https://tpgit.edu.in/wp-content/uploads/2022/05/News-Letter-November.pdf" target="_blank" class="common-link">
+            <span class="arrow">&#x2B9A;</span> TPGIT News Letter, November 2021 </a>
+        <a href="https://tpgit.edu.in/wp-content/uploads/2022/05/News-Letter-October.pdf" target="_blank" class="common-link">
+            <span class="arrow">&#x2B9A;</span>  TPGIT News Letter, October 2021 </a>
+        <a href="https://tpgit.edu.in/wp-content/uploads/2022/05/News-Letter-August-Sept.pdf" target="_blank" class="common-link">
+            <span class="arrow">&#x2B9A;</span> TPGIT News Letter, August & September 2021 </a>
+        <a href="https://tpgit.edu.in/wp-content/uploads/2020/02/January-2020.pdf" target="_blank" class="common-link">
+            <span class="arrow">&#x2B9A;</span> TPGIT News Letter, January 2020  </a>
+        <a href="https://tpgit.edu.in/wp-content/uploads/2019/03/February-Newsletter-final.pdf" target="_blank" class="common-link">
+            <span class="arrow">&#x2B9A;</span> TPGIT News Letter, February 2019 </a>
+        <a href="https://tpgit.edu.in/wp-content/uploads/2019/02/TPGITNews-January-2019.pdf" target="_blank" class="common-link">
+            <span class="arrow">&#x2B9A;</span>  TPGIT News Letter, January 2019 </a>
+    </section>
+
+    <a href="index.html" class="back-to-home">Back to Home</a>
+
+
+    <!-- Placeholder for the Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- JavaScript to Load Header and Footer -->
+    <script>
+        function loadHeaderFooterNavbar() {
+            // Load the header
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                    console.log('Header loaded successfully');
+                })
+                .catch(error => console.error('Error loading header:', error));
+    
+            // Load the navbar
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar-placeholder').innerHTML = data;
+                    console.log('Navbar loaded successfully');
+                })
+                .catch(error => console.error('Error loading navbar:', error));
+    
+            // Load the footer
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                    console.log('Footer loaded successfully');
+                })
+                .catch(error => console.error('Error loading footer:', error));
+        }
+    
+        window.onload = loadHeaderFooterNavbar;
+    </script>
+
+</body>
+</html>

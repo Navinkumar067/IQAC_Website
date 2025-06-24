@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPGIT - Internal Quality Assurance Cell</title>
+
+    <!-- Link to Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General page styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white; 
+        }
+
+        /* Heading Style */
+        h2 {
+            text-align: center;
+            color: #0053a0;
+            background-color: white; 
+            padding: 10px 0;
+            margin: 20px 0; 
+        }
+
+        /* Faculty Details Section */
+        .faculty-details {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+            background-color: white; 
+        }
+
+        .faculty-member {
+            background-color: white; 
+            border: 1px solid white;
+            border-radius: 10px;
+            width: 300px;
+            margin: 20px;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 4px 8px #0053a0; 
+        }
+
+        .faculty-member img {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .faculty-member h4 {
+            color: #333;
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+
+        .faculty-member p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .faculty-member .title {
+            font-weight: bold;
+            color: #1352FE;
+            font-size: 16px;
+        }
+
+        /* Styling for the Back to Home link */
+        .back-to-home {
+            color: #007BFF; 
+            text-decoration: none; 
+            margin-top: 20px; 
+            text-align: center; 
+            display: block; 
+            margin-bottom: 40px;
+            padding: 10px 0; 
+        }
+
+        .back-to-home:hover {
+            text-decoration: underline; 
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Placeholder for the Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Placeholder for Navbar -->
+    <div id="navbar-placeholder"></div>
+
+    <h2>IQAC Members</h2>
+
+    <!-- Faculty Details Section -->
+    <div class="faculty-details">
+        <!-- Faculty 1 -->
+        <div class="faculty-member">
+            <img src="https://tpgit.edu.in/wp-content/uploads/2024/07/PHOTO-TPGITT-1-300x287.jpeg" alt="Dr.P.K.Palani">
+            <h4>Dr.P.K.Palani,</h4>
+            <h4>B.E.(HONS),M.E.,Ph.D.,</h4>
+            <p class="title">Head of Quality Assurance</p>
+            <p>Overseeing quality audits and compliance.</p>
+        </div>
+
+        <!-- Faculty 2 -->
+        <div class="faculty-member">
+            <img src="Images/jagadeeshwari mam.jpg" alt="Prof.N.Jagadeeswari">
+            <h4> Prof.N.Jagadeeswari,M.E.,</h4>
+            <p class="title">Academic Quality Coordinator</p>
+            <p>Managing curriculum improvements.</p>
+        </div>
+
+        <!-- Faculty 3 -->
+        <div class="faculty-member">
+            <img src="path_to_image/faculty3.jpg" alt="Dr. Emily Johnson">
+            <h4>Prof.M.Anbarasu,M.E.,</h4>
+            <p class="title">Research Quality Specialist</p>
+            <p>Ensuring research standards are maintained.</p>
+        </div>
+    </div>
+
+    <!-- Back to Home Link positioned below content and above the footer -->
+    <a href="index.html" class="back-to-home">Back to Home</a>
+
+    <!-- Placeholder for the Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- JavaScript to Load Header and Footer -->
+    <script>
+        function loadHeaderFooterNavbar() {
+            // Load the header
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                    console.log('Header loaded successfully');
+                })
+                .catch(error => console.error('Error loading header:', error));
+
+            // Load the navbar
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar-placeholder').innerHTML = data;
+                    console.log('Navbar loaded successfully');
+                })
+                .catch(error => console.error('Error loading navbar:', error));
+
+            // Load the footer
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                    console.log('Footer loaded successfully');
+                })
+                .catch(error => console.error('Error loading footer:', error));
+        }
+
+        window.onload = loadHeaderFooterNavbar;
+    </script>
+
+</body>
+</html>

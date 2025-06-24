@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPGIT - Internal Quality Assurance Cell</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+
+    <style>
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            color: #0053a0;
+            cursor: pointer;
+        }
+
+        .left-arrow {
+            left: 10px;
+        }
+
+        .right-arrow {
+            right: 10px;
+        }
+
+        .facilities-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 20px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+
+        .facilities-content ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .facilities-content li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            line-height: 1.6;
+            color: #333;
+            font-size: 1.1rem;
+        }
+
+        .facilities-content li i {
+            margin-right: 10px;
+            flex-shrink: 0;
+            color: #0053a0;
+            font-size: 1.2rem;
+        }
+
+        .facilities-content li span {
+            text-align: justify;
+            display: block;
+            width: 100%;
+        }
+
+        h2 {
+            color: #0053a0;
+            text-align: center;
+        }
+
+        .center-image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            margin-bottom: 30px;
+        }
+
+        .back-to-home {
+            color: #007BFF;
+            text-decoration: none;
+            margin: 20px 0;
+            text-align: center;
+            display: block;
+        }
+
+        .back-to-home:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <div id="navbar-placeholder"></div>
+    
+    <h2>Facilities</h2>
+
+    <img class="center-image" src="https://tpgit.edu.in/wp-content/uploads/2021/01/College-Facilities.gif" alt="College Facilities">
+
+    <div class="facilities-content">
+        <ul>
+            <li><i class="remixicon ri-checkbox-circle-line"></i> <span>Library: Not explicitly mentioned, but as a government engineering institution, it is likely to have a well-equipped library with a vast collection of books, journals, and online resources.</span></li>
+            <li><i class="remixicon ri-checkbox-circle-line"></i> <span>Auditorium: A venue for events, seminars, and cultural activities.</span></li>
+            <li><i class="remixicon ri-checkbox-circle-line"></i> <span>Hostels: Available for students, providing accommodation and support services.</span></li>
+            <li><i class="remixicon ri-checkbox-circle-line"></i> <span>Sports Facilities: Not detailed, but likely to include indoor and outdoor sports facilities, such as courts, grounds, and gymnasiums.</span></li>
+            <li><i class="remixicon ri-checkbox-circle-line"></i> <span>Internet: High-speed internet connection is available in the college, enabling students to access online resources and complete assignments.</span></li>
+            <li><i class="remixicon ri-checkbox-circle-line"></i> <span>Gym: A facility for students to develop their physical fitness and well-being.</span></li>
+        </ul>
+    </div>
+    
+    <a href="index.html" class="back-to-home">Back to Home</a>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        function loadHeaderFooterNavbar() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                    console.log('Header loaded successfully');
+                })
+                .catch(error => console.error('Error loading header:', error));
+    
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar-placeholder').innerHTML = data;
+                    console.log('Navbar loaded successfully');
+                })
+                .catch(error => console.error('Error loading navbar:', error));
+    
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                    console.log('Footer loaded successfully');
+                })
+                .catch(error => console.error('Error loading footer:', error));
+        }
+    
+        window.onload = loadHeaderFooterNavbar;
+    </script>
+
+</body>
+</html>

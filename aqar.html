@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPGIT - Internal Quality Assurance Cell</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .aqar-content {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .section-box {
+            background-color: #e9f5ff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .aqar-content h1 {
+            color: #0053a0;
+            text-align: center;
+            margin: 20px 0 30px;
+        }
+
+        .aqar-content ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        .aqar-content ul li {
+            margin-bottom: 20px;
+        }
+
+        .aqar-content .pdf-link {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .aqar-content .pdf-link:hover {
+            text-decoration: underline;
+        }
+
+        .back-to-home {
+            color: #007BFF;
+            text-decoration: none;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .back-to-home:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <div id="navbar-placeholder"></div>
+
+    <div class="aqar-content">
+        <div class="section-box">
+            <h1>AQAR</h1>
+            <ul>
+                <li><a href="https://drive.google.com/file/d/10d_kjEGA5rxqBB2OZ7d87q6UZlBYcL3s/view?usp=sharing" target="_blank" class="pdf-link">AQAR 2023-2024</a></li>
+                <li><a href="https://drive.google.com/file/d/1uEasewmGeFCGvXiGFpe-sQQ59iUGFQud/view?usp=sharing" target="_blank" class="pdf-link">AQAR 2023-2024</a></li>
+                <li><a href="https://drive.google.com/file/d/1w0Hnb5SRHkwuMHVwTskmq1d_wBSwEaiw/view?usp=sharing" target="_blank" class="pdf-link">AQAR 2022-2023</a></li>
+                <li><a href="Ehttps://drive.google.com/file/d/1B_6wB3lt3rLexsWvqsl0buMJVXAj2fz5/view?usp=sharing" target="_blank" class="pdf-link">AQAR 2022-2022</a></li>
+                <li><a href="https://drive.google.com/file/d/10d_kjEGA5rxqBB2OZ7d87q6UZlBYcL3s/view?usp=sharing" target="_blank" class="pdf-link">AQAR 2021-2022</a></li>
+                <li><a href="https://drive.google.com/file/d/10d_kjEGA5rxqBB2OZ7d87q6UZlBYcL3s/view?usp=sharing" target="_blank" class="pdf-link">AQAR 2020-2021</a></li>
+            </ul>
+        </div>
+        <a href="index.html" class="back-to-home">Back to Home</a>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        function loadHeaderFooterNavbar() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                    console.log('Header loaded successfully');
+                })
+                .catch(error => console.error('Error loading header:', error));
+
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar-placeholder').innerHTML = data;
+                    console.log('Navbar loaded successfully');
+                })
+                .catch(error => console.error('Error loading navbar:', error));
+
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                    console.log('Footer loaded successfully');
+                })
+                .catch(error => console.error('Error loading footer:', error));
+        }
+
+        window.onload = loadHeaderFooterNavbar;
+    </script>
+</body>
+</html>

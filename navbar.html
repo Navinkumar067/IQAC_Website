@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPGIT - Internal Quality Assurance Cell</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, 'Times New Roman', Times, serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        ul.navbar {
+            list-style-type: none;
+            margin: 0; 
+            padding: 0;
+            background-color: #0053a0; 
+            display: flex; 
+            justify-content: space-around; 
+            position: relative; 
+            z-index: 1000;
+        }
+
+        ul.navbar li {
+            position: relative;
+        }
+
+        ul.navbar li a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 10px 10px;
+            text-decoration: none;
+        }
+
+        ul.navbar li a:hover {
+            background-color: #004080;
+        }
+
+        ul.navbar .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: #0053a0;
+            min-width: 160px;
+            z-index: 1001;
+            border-radius: 5px;
+        }
+
+        ul.navbar .dropdown-menu li {
+            list-style-type: none;
+        }
+
+        ul.navbar .dropdown-menu a {
+            color: white;
+            padding: 12px 16px;
+            display: block;
+            text-decoration: none;
+        }
+
+        ul.navbar .dropdown-menu a:hover {
+            background-color: #004080;
+        }
+
+        ul.navbar li:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-symbol {
+            margin-left: 5px;
+            font-size: 0.6em;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            ul.navbar {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            ul.navbar .dropdown-menu {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <ul class="navbar">
+        <li> 
+            <a href="about-us.html">About Us</a> 
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn" aria-expanded="false">IQAC <span class="dropdown-symbol">▼</span></a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="facilities.html">Facilities</a></li>
+                <li><a class="dropdown-item" href="quality-initiatives.html">Quality Initiatives</a></li>
+                <li><a class="dropdown-item" href="minutes-meetings.html">Minutes of IQAC Meetings</a></li>
+                <li><a class="dropdown-item" href="distinctiveness.html">Distinctiveness</a></li>
+                <li><a class="dropdown-item" href="best-practices.html">Best Practices</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn" aria-expanded="false">Events & Recognitions <span class="dropdown-symbol">▼</span></a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="events.html">Events</a></li>
+                <li><a class="dropdown-item" href="awards.html">Awards and Recognitions</a></li>
+            </ul>
+        </li>
+        <li> 
+            <a href="aqar.html">AQAR</a> 
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn" aria-expanded="false">Placements <span class="dropdown-symbol">▼</span></a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="placed information.html">Placed Information</a></li>
+                <li><a class="dropdown-item" href="career sites.html">Career Sites</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="faculty-details.html">IQAC Members</a> 
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn" aria-expanded="false">Login <span class="dropdown-symbol">▼</span></a> 
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="student_login.html">Student Login</a></li>
+                <li><a class="dropdown-item" href="faculty_login.html">Faculty Login</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="research.html">Research</a> 
+        </li>
+    </ul>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.querySelectorAll('.dropbtn').forEach(item => {
+            item.addEventListener('click', event => {
+                const dropdownMenu = item.nextElementSibling;
+                dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+</html>

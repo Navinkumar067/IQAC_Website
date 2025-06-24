@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPGIT - Internal Quality Assurance Cell</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        h1 {
+            color: #0053a0;
+            text-align: center;
+        }
+
+        .center-image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        .pdf-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: #0053a0;
+            text-decoration: none;
+        }
+
+        .pdf-link:hover {
+            text-decoration: underline;
+        }
+
+        .section-box {
+            background-color: #e9f5ff;
+            padding: 20px;
+            margin: 30px auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 80%;
+        }
+
+        .common-link {
+            color: #0053a0;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+        }
+
+        .common-link:hover {
+            text-decoration: underline;
+        }
+
+        .common-link .arrow {
+            text-decoration: none;
+            margin-right: 5px;
+            display: inline-block;
+            font-weight: bold;
+        }
+
+        .back-to-home {
+            color: #007BFF;
+            text-decoration: none;
+            margin-top: 20px;
+            text-align: center;
+            display: block;
+        }
+
+        .back-to-home:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <div id="navbar-placeholder"></div>
+
+    <section class="section-box Meetings">
+        <h2>Minutes of IQAC</h2>
+        <a href="https://mmit.edu.in/images/IQAC/Minitues_of_meeting/MOM_IQAC_X_Meeting---16-Jan-2021.pdf" target="_blank" class="common-link">
+            <span class="arrow">&#x2B9A;</span> THE FIRST MEETING OF THE INTERNAL QUALITY ASSURANCE CELL (IQAC) (A.Y. 2020-21)</a>
+        <a href="https://mmit.edu.in/images/IQAC/Minitues_of_meeting/MOM_IQAC_XI_Meeting---10-Aug-2021.pdf" target="_blank" class="common-link">
+            <span class="arrow">&#x2B9A;</span> THE SECOND MEETING OF THE INTERNAL QUALITY ASSURANCE CELL (IQAC) (A.Y. 2020-21) </a>
+        <a href="https://mmit.edu.in/images/IQAC/Minitues_of_meeting/21-22-Sem1---MOM-IQAC-Meeting-12.pdf" target="_blank" class="common-link">
+            <span class="arrow">&#x2B9A;</span> THE THIRD MEETING OF THE INTERNAL QUALITY ASSURANCE CELL (IQAC) (A.Y. 2021-22)</a>
+        <a href="https://mmit.edu.in/images/IQAC/Minitues_of_meeting/21-22-Sem2---MOM-IQAC-Meeting-13.pdf" target="_blank" class="common-link">
+            <span class="arrow">&#x2B9A;</span> THE FOURTH MEETING OF THE INTERNAL QUALITY ASSURANCE CELL (IQAC) (A.Y. 2021-22)</a>
+        <a href="https://mmit.edu.in/images/IQAC/Minitues_of_meeting/MOM-IQAC-Meeting---22-23-SEM-I.pdf" target="_blank" class="common-link">
+            <span class="arrow">&#x2B9A;</span> THE FIFTH MEETING OF THE INTERNAL QUALITY ASSURANCE CELL (IQAC) (A.Y. 2022-23)</a>
+        <a href="https://mmit.edu.in/images/IQAC/Minitues_of_meeting/MOM-IQAC-Meeting---22-23-SEM-II.pdf" target="_blank" class="common-link">
+            <span class="arrow">&#x2B9A;</span> THE SIXTH MEETING OF THE INTERNAL QUALITY ASSURANCE CELL (IQAC) (A.Y.2022-23) </a>
+        <a href="https://mmit.edu.in/images/IQAC/Minitues_of_meeting/MOM-IQAC-Meeting-16---23-24-1st.pdf" target="_blank" class="common-link">
+            <span class="arrow">&#x2B9A;</span> THE SEVENTH MEETING OF THE INTERNAL QUALITY ASSURANCE CELL (IQAC) (A.Y.2023-24)</a>
+        <a href="https://mmit.edu.in/images/IQAC/Minitues_of_meeting/MOM-IQAC-Meeting-17---23-24-2nd.pdf" target="_blank" class="common-link">
+            <span class="arrow">&#x2B9A;</span> THE EIGHT MEETING OF THE INTERNAL QUALITY ASSURANCE CELL (IQAC) (A.Y.2023-24)</a>
+    </section>
+
+    <a href="index.html" class="back-to-home">Back to Home</a>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        function loadHeaderFooterNavbar() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                    console.log('Header loaded successfully');
+                })
+                .catch(error => console.error('Error loading header:', error));
+    
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar-placeholder').innerHTML = data;
+                    console.log('Navbar loaded successfully');
+                })
+                .catch(error => console.error('Error loading navbar:', error));
+    
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                    console.log('Footer loaded successfully');
+                })
+                .catch(error => console.error('Error loading footer:', error));
+        }
+    
+        window.onload = loadHeaderFooterNavbar;
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPGIT - Internal Quality Assurance Cell</title>
+
+    <!-- Link to External CSS file -->
+    <link rel="stylesheet" href="styles.css"> <!-- Ensure styles.css is in your project folder -->
+
+    <style>
+        /* Reset some default browser styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            flex: 1;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex; 
+            flex-direction: row; 
+            justify-content: space-between;
+            align-items: flex-start; 
+        }
+
+        .contact-details {
+            flex: 1; 
+            font-size: 1.1em;
+            line-height: 1.8;
+            padding-right: 20px; 
+        }
+
+        .contact-details p {
+            margin-bottom: 10px;
+        }
+
+        .contact-details a {
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .map-container {
+            flex: 1; 
+            max-width: 450px;
+        }
+
+        .map-container iframe {
+            border: none;
+            width: 100%;
+            height: 450px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Placeholder for the Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Placeholder for Navbar -->
+<div id="navbar-placeholder"></div>
+
+    <!-- Contact Section -->
+    <div class="container">
+        <div class="contact-details">
+            <h2>CONTACT US</h2>
+            <p>Thanthai Periyar Government Institute of Technology,<br>
+            Chitteri Road, Bagayam, Vellore District – 632002,<br>
+            Tamil Nadu.</p>
+            <p>Phone: 0416 – 2267762, 0416 – 2907762.<br>
+            Fax: 0416 – 2267498<br>
+            Email: <a href="mailto:principaltpgit@gmail.com">principaltpgit@gmail.com</a></p>
+        </div>
+
+        <!-- Google Map Embed -->
+        <div class="map-container">
+            <iframe 
+                src="https://maps.google.com/maps?q=Thanthai%20Periyar%20Government%20Institute%20of%20Technology&amp;t=m&amp;z=10&amp;output=embed&amp;iwloc=near" 
+                title="Thanthai Periyar Government Institute of Technology" 
+                aria-label="Thanthai Periyar Government Institute of Technology">
+            </iframe>
+        </div>
+    </div>
+
+      <!-- Placeholder for the Footer -->
+<div id="footer-placeholder"></div>
+
+<!-- JavaScript to Load Header and Footer -->
+<script>
+    function loadHeaderFooterNavbar() {
+        // Load the header
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                console.log('Header loaded successfully');
+            })
+            .catch(error => console.error('Error loading header:', error));
+
+        // Load the navbar
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+                console.log('Navbar loaded successfully');
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+
+        // Load the footer
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+                console.log('Footer loaded successfully');
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    }
+
+    window.onload = loadHeaderFooterNavbar;
+</script>
+
+</body>
+</html>

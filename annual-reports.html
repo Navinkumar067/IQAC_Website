@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPGIT - Internal Quality Assurance Cell</title>
+
+    <!-- Link to Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Reset margin and padding for body */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column; 
+            min-height: 100vh; 
+        }
+
+        /* Main Content Area */
+        .reports-content {
+            flex: 1; 
+            padding: 20px; 
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: flex-start;
+        }
+
+        /* Section Box Styling */
+        .section-box {
+            background-color: #e9f5ff; 
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%; 
+            max-width: 800px;
+            margin: 20px auto; 
+        }
+
+        /* Styling the headings within main content */
+        .reports-content h2 {
+            color: #0053a0;
+            text-align: center; 
+            margin: 30px 0 30px; 
+        }
+
+        /* Links styling */
+        .reports-content ul {
+            list-style-type: none; 
+            padding: 0; 
+            text-align: center; 
+        }
+
+        .reports-content ul li {
+            margin-bottom: 20px; 
+        }
+
+        .reports-content .pdf-link {
+            color: #007BFF; 
+            text-decoration: none; 
+        }
+
+        .reports-content .pdf-link:hover {
+            text-decoration: underline; 
+        }
+
+        /* Styling the Back to Home link */
+        .back-to-home {
+            color: #007BFF;
+            text-decoration: none; 
+            margin-top: 20px; 
+            text-align: center; 
+        }
+
+        .back-to-home:hover {
+            text-decoration: underline; 
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Placeholder for the Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Placeholder for Navbar -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Main Content -->
+    <div class="reports-content">
+        <div class="section-box">
+            <h2>Annual Reports</h2>
+            <ul>
+                <li><a href="https://tpgit.edu.in/wp-content/uploads/2024/07/EOA-Report-2024-25.pdf" target="_blank" class="pdf-link">AY 2023-2024</a></li>
+                <li><a href="https://vit.ac.in/files/annual-report-2017-18/index.html" target="_blank" class="pdf-link">AY 2022-2023</a></li>
+                <li><a href="https://vit.ac.in/files/annual-report-2016-17/index.html" target="_blank" class="pdf-link">AY 2021-2022</a></li>
+            </ul>
+        </div>
+        <a href="index.html" class="back-to-home">Back to Home</a> <!-- Positioned below the section box -->
+    </div>
+
+    <!-- Placeholder for the Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- JavaScript to Load Header and Footer -->
+    <script>
+        function loadHeaderFooterNavbar() {
+            // Load the header
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                    console.log('Header loaded successfully');
+                })
+                .catch(error => console.error('Error loading header:', error));
+
+            // Load the navbar
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar-placeholder').innerHTML = data;
+                    console.log('Navbar loaded successfully');
+                })
+                .catch(error => console.error('Error loading navbar:', error));
+
+            // Load the footer
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                    console.log('Footer loaded successfully');
+                })
+                .catch(error => console.error('Error loading footer:', error));
+        }
+
+        window.onload = loadHeaderFooterNavbar;
+    </script>
+</body>
+</html>

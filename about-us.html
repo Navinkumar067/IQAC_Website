@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPGIT - Internal Quality Assurance Cell</title>
+
+    <!-- Link to Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9; 
+            margin: 0;
+            padding: 0;
+        }
+
+        .about-us-box {
+            background-color: #e6f7ff; 
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            line-height: 1.6;
+            border-radius: 10px;
+        }
+
+        .about-us-box h1, .about-us-box h2 {
+            text-align: center;
+            color: #0053a0; 
+        }
+
+        .about-us-box p {
+            color: #333;
+            margin-top: 20px;
+        }
+
+        .about-us-box a {
+            display: block;
+            text-align: center;
+            margin-top: 30px;
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .about-us-box a:hover {
+            text-decoration: underline;
+        }
+
+        .image-container {
+            text-align: center;
+            margin-bottom: 20px; 
+        }
+
+        .image-container img {
+            max-width: 80%; 
+            height: auto;
+            border-radius: 10px; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .vision, .mission, .core-values {
+            background-color: #ffffff; 
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); 
+        }
+
+        .vision h3, .mission h3, .core-values h3 {
+            color: #0053a0; 
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Placeholder for the Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Placeholder for Navbar -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- About Us Section -->
+    <div class="about-us">
+        <div class="about-us-box">
+            <div class="image-container">
+                <img src="https://tpgit.edu.in/wp-content/uploads/2021/06/ezgif.com-gif-maker-new.gif" alt="TPGIT Campus Image">
+            </div>
+            <h2>About Us</h2>
+            <h3>Welcome to TPGIT, Vellore</h3>
+            <p>We are very much pleased to provide valuable information about this institution and its related activities. We are also very happy to invite you to this Green Campus Environment for a pleasant visit.</p>
+            <p>Thanthai Periyar Government Institute of Technology, started in the year 1990, is one of the eleven Government Engineering Colleges in Tamil Nadu, which is approved by All India Council for Technical Education (AICTE) and admits students purely on a single window system of admissions. It belongs to Zone 6 of Anna University.</p>
+            <p>A sprawling campus surrounded by lush green cover provides an ideal atmosphere for students to learn and excel in the field of technical education. In addition to reinforcing theoretical concepts, the Engineering College exposes students to the latest trends, keeping in mind industry requirements, through interactive practical sessions held in well-equipped laboratories.</p>
+            <p>The college also conducts many International/National Level Conferences and Symposiums for the benefit of students as part of its annual agenda, helping them stay updated with technological advancements and evolving trends.</p>
+            <p>Thanthai Periyar Government Institute of Technology is continuously developing and enriching its students in various aspects. Alumni have made their mark in academics and extracurricular activities.</p>
+
+            <!-- New Sections -->
+            <div class="vision">
+                <h3>Our Vision</h3>
+                <p>To offer education programmes that blend intensive technical training with appropriate guidance inculcating analytical skills and problem solving ability with high degree of professionalism.</p>
+                
+            </div>
+            <div class="mission">
+                <h3>Our Mission</h3>
+                <p>To provide quality education, promote research and development, and prepare students to face the challenges of the globalized world.</p>
+                <p>To provide healthy environment with excellent facilities for learning, research and innovative thinking.</p>
+                <p>To educate the students achieve their professional excellence with ethical and social responsibilities.</p>
+            </div>
+            <div class="core-values">
+                <h3>Core Values</h3>
+                <ul>
+                    <li>Integrity</li>
+                    <li>Collaboration</li>
+                    <li>Excellence</li>
+                    <li>Innovation</li>
+                    <li>Respect for all</li>
+                </ul>
+            </div>
+
+            <a href="index.html">Back to Home</a>
+        </div>
+    </div>
+
+    <!-- Placeholder for the Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- JavaScript to Load Header, Navbar, and Footer -->
+    <script>
+        function loadHeaderFooterNavbar() {
+            // Load the header
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                    console.log('Header loaded successfully');
+                })
+                .catch(error => console.error('Error loading header:', error));
+
+            // Load the navbar
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar-placeholder').innerHTML = data;
+                    console.log('Navbar loaded successfully');
+                })
+                .catch(error => console.error('Error loading navbar:', error));
+
+            // Load the footer
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                    console.log('Footer loaded successfully');
+                })
+                .catch(error => console.error('Error loading footer:', error));
+        }
+
+        window.onload = loadHeaderFooterNavbar;
+    </script>
+
+</body>
+</html>

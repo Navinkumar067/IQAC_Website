@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPGIT - Internal Quality Assurance Cell</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        h1 {
+            color: #0053a0;
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+
+        .center-image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        .pdf-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: #0053a0;
+            text-decoration: none;
+        }
+
+        .pdf-link:hover {
+            text-decoration: underline;
+        }
+
+        .image-slider {
+            position: relative;
+            width: 60%;
+            margin: 30px auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .slider-image {
+            display: none;
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            color: #0053a0;
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.6);
+            padding: 10px;
+            border-radius: 50%;
+            transition: background 0.3s ease;
+        }
+
+        .arrow:hover {
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .left-arrow {
+            left: 10px;
+        }
+        .right-arrow {
+            right: 10px;
+        }
+
+        .awards-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+        }
+
+        .awards-content ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: justify;
+        }
+
+        .awards-content li {
+            margin-bottom: 15px;
+            line-height: 1.8;
+            color: #333;
+            font-size: 1.1rem;
+        }
+
+        .awards-content li::before {
+            content: "\f058";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            color: #0053a0;
+            margin-right: 10px;
+        }
+
+        .slider-image.active {
+            transform: scale(1.05);
+        }
+
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .image-slider {
+                width: 90%;
+            }
+
+            .awards-content {
+                max-width: 90%;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <div id="navbar-placeholder"></div>
+    
+    <h1>Events</h1>
+
+    <div class="image-slider">
+        <span class="arrow left-arrow" onclick="changeImage(-1)">&#11164;</span>
+        <img class="slider-image active" src="https://tpgit.edu.in/wp-content/uploads/2022/03/Alumni-Meet-2022-1.jpg" alt="Awards">
+        <img class="slider-image" src="https://tpgit.edu.in/wp-content/uploads/2022/03/Alumni-Meet-2022-3.jpg" alt="Awards">
+        <img class="slider-image" src="https://tpgit.edu.in/wp-content/uploads/2022/03/Alumni-Meet-2022-2.jpg" alt="Awards">
+        <img class="slider-image" src="https://tpgit.edu.in/wp-content/uploads/2022/03/Alumni-Meet-2022.jpg" alt="Awards">
+        <img class="slider-image" src="https://tpgit.edu.in/wp-content/uploads/2022/03/Alumni-Meet-2022-6.jpg" alt="Awards">
+        <img class="slider-image" src="https://tpgit.edu.in/wp-content/uploads/2022/03/Alumni-Meet-2022-9.jpg" alt="Awards">
+        <img class="slider-image" src="https://tpgit.edu.in/wp-content/uploads/2022/03/Alumni-Meet-2022-5.jpg" alt="Awards">
+        <span class="arrow right-arrow" onclick="changeImage(1)">&#11166;</span>
+    </div>
+
+    <div class="awards-content">
+        <ul>
+            <li>Thanthai Periyar Government Institute of Technology has started in the year 1990. Today, 25 glorious years after the founding of TPGIT, alumni remain as engaged and connected to the College as ever.</li>
+            <li>More than 4,000 alumni come here without fail every year to connect and interact with each other, share their valuable thoughts and learn and be updated. Alumni Association and Volunteers have a special role in making this event successful every year.</li>
+            <li>It’s really good to spare some of your valuable time to attend the association, and it’s really meaningful and worthy.</li>
+            <li>We provide this also as a great opportunity for our current students to meet the alumni who are professionals and get their thoughts and nourish their knowledge and network.</li>
+        </ul>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        function loadHeaderFooterNavbar() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                    console.log('Header loaded successfully');
+                })
+                .catch(error => console.error('Error loading header:', error));
+    
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar-placeholder').innerHTML = data;
+                    console.log('Navbar loaded successfully');
+                })
+                .catch(error => console.error('Error loading navbar:', error));
+    
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                    console.log('Footer loaded successfully');
+                })
+                .catch(error => console.error('Error loading footer:', error));
+        }
+    
+        window.onload = loadHeaderFooterNavbar;
+
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.slider-image');
+
+        function changeImage(direction) {
+            images[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + direction + images.length) % images.length;
+            images[currentIndex].classList.add('active');
+        }
+    </script>
+
+</body>
+</html>

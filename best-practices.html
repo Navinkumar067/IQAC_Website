@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPGIT - Internal Quality Assurance Cell</title>
+
+    <!-- Link to Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Styling the headings in blue */
+        h2 {
+            color: #0053a0;
+            text-align: center; 
+            margin-bottom: 30px; 
+        }
+
+        /* Styling for the content block */
+        .content-block {
+            width: 80%; 
+            margin: 0 auto; 
+            padding: 20px;
+            text-align: justify; 
+            line-height: 2;
+            background-color: #e9f5ff; 
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+        }
+
+        /* Add margin between paragraphs */
+        .content-block p {
+            margin-bottom: 1em; 
+        }
+
+        /* Styling for the Back to Home link */
+        .back-to-home {
+            color: #007BFF; 
+            text-decoration: none; 
+            margin: 20px 0; 
+            text-align: center; 
+            display: block; 
+        }
+
+        .back-to-home:hover {
+            text-decoration: underline; 
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Placeholder for the Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Placeholder for Navbar -->
+    <div id="navbar-placeholder"></div>
+    
+    <h2>Best practices</h2>
+
+    <!-- Best Practices Content -->
+    <div class="content-block">
+        <p><strong>Established in 1990:</strong> The IQAC has been functioning for over three decades, demonstrating a commitment to quality assurance and continuous improvement.</p>
+        <p><strong>Public/Government Institution:</strong> As a government institution, the IQAC may benefit from the transparency and accountability inherent in public institutions, ensuring that quality assurance processes are open and accessible.</p>
+        <p><strong>AICTE Approved Programs:</strong> The institute offers AICTE-approved programs, indicating a focus on meeting national standards and guidelines for engineering education.</p>
+        <p><strong>Wide Range of Degree Programs:</strong> The IQAC may prioritize quality assurance across various degree programs, including undergraduate and postgraduate levels, to ensure consistency and excellence.</p>
+        <p><strong>Regular Monitoring and Evaluation:</strong> The IQAC should regularly monitor and evaluate academic programs, faculty performance, and student outcomes to identify areas for improvement and implement necessary changes.</p>
+        <p><strong>Student Feedback Mechanism:</strong> The IQAC should establish a robust student feedback mechanism to gather insights on the academic experience, curriculum, and faculty performance, enabling data-driven decision-making.</p>
+        <p><strong>Faculty Development:</strong> The IQAC may prioritize faculty development programs, workshops, and training sessions to enhance teaching skills, stay updated with industry trends, and promote research and innovation.</p>
+        <p><strong>Industry-Academe Partnerships:</strong> The IQAC should foster partnerships with industries and organizations to provide internship opportunities, guest lectures, and project collaborations, ensuring that academic programs remain relevant and industry-ready.</p>
+        <p><strong>Campus Resources and Infrastructure:</strong> The IQAC should ensure that the institute’s campus resources and infrastructure, including laboratories, libraries, and IT facilities, are well-maintained and upgraded regularly to support academic programs.</p>
+        <p><strong>Transparency and Accountability:</strong> The IQAC should maintain transparency in its operations, decision-making processes, and quality assurance activities, ensuring accountability and trust among stakeholders, including students, faculty, and parents.</p>
+    </div>
+
+    <a href="index.html" class="back-to-home">Back to Home</a>
+
+    <!-- Placeholder for the Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- JavaScript to Load Header and Footer -->
+    <script>
+        function loadHeaderFooterNavbar() {
+            // Load the header
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                    console.log('Header loaded successfully');
+                })
+                .catch(error => console.error('Error loading header:', error));
+    
+            // Load the navbar
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar-placeholder').innerHTML = data;
+                    console.log('Navbar loaded successfully');
+                })
+                .catch(error => console.error('Error loading navbar:', error));
+    
+            // Load the footer
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                    console.log('Footer loaded successfully');
+                })
+                .catch(error => console.error('Error loading footer:', error));
+        }
+    
+        window.onload = loadHeaderFooterNavbar;
+    </script>
+
+</body>
+</html>

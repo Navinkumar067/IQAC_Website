@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPGIT - Internal Quality Assurance Cell</title>
+
+    <!-- Link to Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Specific to Research section */
+        .research-section {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .research-section .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .research-section h1 {
+            text-align: center;
+            color: #0053a0;
+        }
+
+        .research-section h2 {
+            color: #0053a0;
+        }
+
+        .research-section .content {
+            padding: 20px;
+        }
+
+        /* Box styling for each section */
+        .research-section .section-box {
+            background-color: #e9f5ff; 
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .research-section .back-link {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+            text-decoration: none; 
+            color: #0053a0;
+        }
+
+        .research-section .back-link:focus,
+        .research-section .back-link:active {
+            text-decoration: underline; 
+        }
+ /* Styling for the Back to Home link */
+ .back-to-home {
+            color: #007BFF; 
+            text-decoration: none; 
+            margin: 20px 0; 
+            text-align: center; 
+            display: block; 
+        }
+
+        .back-to-home:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Placeholder for the Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Placeholder for Navbar -->
+    <div id="navbar-placeholder"></div>
+
+    <div class="research-section"> 
+        <div class="container">
+            <h1>Research Overview</h1>
+
+            <div class="section-box">
+                <h2>Overview</h2>
+                <p>All the departments of TPGIT are recognized as research centers of Anna University, Chennai. Committed to excellence in fundamental research as well as the development of innovative technologies for the current & future generation, TPGIT is offering research programs in different branches of Engineering [Civil, Mechanical, ECE, EEE and CSE] and in Science and Humanities. All the Research scholars either pursuing through regular or part-time mode should be admitted through Anna University. Ever since its inception in the year 1990, the Institution has taken concerted efforts towards differentiating itself by encouraging Innovation and Research development. It provides support and guidance to enable faculty and students to take up research and innovative development relevant to industry as well as society. Sophisticated research facilities are available in all the departments.</p>
+            </div>
+
+            <div class="section-box">
+                <h2>Multidisciplinary Research</h2>
+                <p>TPGIT motivates a multidisciplinary research approach and collaborative research approach with eminent Institutes and Industry. Government of Tamil Nadu granted Rs. 2 crores for encouraging research activities for the academic year 2020-2021. The Center for Research & Consultancy of TPGIT also uplifts the faculty and Research scholars to receive funds from various agencies such as AICTE, DST, DRDO, TANNI, TNSCST, DBT, DAE etc.</p>
+            </div>
+
+            <div class="section-box">
+                <h2>Details of Professors</h2>
+                <p>Details of Professors</p>
+            </div>
+
+            <div class="section-box">
+                <h2>Details of PhD Qualified Faculty</h2>
+                <p>Details of PhD qualified faculty</p>
+            </div>
+
+            <div class="section-box">
+                <h2>Details of Number of Publications in Last 3 Years</h2>
+                <p>Details of Number of Publications in Last 3 Years</p>
+            </div>
+
+            <a href="index.html" class="back-link">Back to Home</a>
+        </div>
+    </div>
+
+    <!-- Placeholder for the Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- JavaScript to Load Header and Footer -->
+    <script>
+        function loadHeaderFooterNavbar() {
+            // Load the header
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                    console.log('Header loaded successfully');
+                })
+                .catch(error => console.error('Error loading header:', error));
+
+            // Load the navbar
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar-placeholder').innerHTML = data;
+                    console.log('Navbar loaded successfully');
+                })
+                .catch(error => console.error('Error loading navbar:', error));
+
+            // Load the footer
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                    console.log('Footer loaded successfully');
+                })
+                .catch(error => console.error('Error loading footer:', error));
+        }
+
+        window.onload = loadHeaderFooterNavbar;
+    </script>
+
+</body>
+</html>
